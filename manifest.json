@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Safe Site",
+  "name": "Safe Site ?",
   "description": "Chrome extension that detect whether the website is safe or not",
   "version": "1.0",
   "icons": {
@@ -8,15 +8,16 @@
     "32": "images/logo-32.png",
     "96": "images/logo-96.png"
   },
+    "action": {
+        "default_popup": "index.html"
+        
+    },
   "content_scripts": [
     {
       "js": [
         "script.js"
       ],
-      "matches": [
-        "https://*/*",
-        "http://*/*"
-      ]
+      "matches": ["<all_urls>"]
     }
   ]
 }
